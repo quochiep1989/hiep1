@@ -88,6 +88,7 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int itemid = item.getItemId();
+		String a="1";
 
 		if (itemid == R.id.Setting) {
 			//Toast.makeText(getApplicationContext(), "Setting", Toast.LENGTH_SHORT).show();
