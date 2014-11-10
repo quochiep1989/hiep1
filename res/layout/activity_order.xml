@@ -5,6 +5,12 @@
     android:layout_height="match_parent"
     android:background="@color/white" >
 
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
     <LinearLayout
         android:id="@+id/LinearLayout2"
         android:layout_width="match_parent"
@@ -47,18 +53,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
-                android:text="Đồ ăn:"
+                android:text="Đồ dùng:"
                 android:textSize="15sp" />
 
-            <Spinner
-                android:id="@+id/spnDo_An"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1" />
+            
+            <TextView
+                android:id="@+id/tvDodung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp" />
+            
         </LinearLayout>
-
+        
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
@@ -67,17 +75,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
-                android:text="Thức uống:"
+                android:text="Notes: "
                 android:textSize="15sp" />
 
-            <Spinner
-                android:id="@+id/spnThuc_Uong"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1" />
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -91,14 +98,14 @@
                 android:layout_marginTop="20dp"
                 android:text="Nhân viên:"
                 android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tvNhanVien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp" />
 
-            <Spinner
-                android:id="@+id/spnNhan_Vien"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1" />
         </LinearLayout>
 
         <Button
@@ -120,6 +127,31 @@
             android:onClick="Onclick_Update"
             android:text="Thanh Toán"
             android:textSize="17sp" />
+
     </LinearLayout>
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true">
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Button" />
+
+        </LinearLayout>
+    
+    </RelativeLayout>
 
 </ScrollView>
