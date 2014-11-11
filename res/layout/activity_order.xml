@@ -1,16 +1,11 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ScrollView1"
+    android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white" >
+    android:background="@color/white"
+    android:orientation="vertical" >
 
-    <RelativeLayout
-        android:id="@+id/RelativeLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        android:orientation="vertical" >
     <LinearLayout
         android:id="@+id/LinearLayout2"
         android:layout_width="match_parent"
@@ -21,27 +16,96 @@
         <requestFocus />
 
         <LinearLayout
+            android:id="@+id/LinearLayout1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="0dp"
+                android:layout_marginTop="10dp"
                 android:text="Bàn số:"
                 android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/edtBanso"
-                android:layout_width="280dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="7dp"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="8"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Đồ dùng:"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/edtDodung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Đơn giá:"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/edtDongia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" 
                 android:layout_weight="1"
-                android:background="@drawable/border_edit_text"
-                android:ems="10"
-                android:inputType="number|numberPassword" />
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="SL:"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/edtSoluong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:inputType="number" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -49,42 +113,19 @@
             android:layout_height="wrap_content" >
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
-                android:text="Đồ dùng:"
-                android:textSize="15sp" />
-
-            
-            <TextView
-                android:id="@+id/tvDodung"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
-                android:textSize="15sp" />
-            
-        </LinearLayout>
-        
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:text="Notes: "
                 android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/editText1"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginTop="17dp"
                 android:ems="10" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -92,12 +133,13 @@
             android:layout_height="wrap_content" >
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
                 android:text="Nhân viên:"
                 android:textSize="15sp" />
+
             <TextView
                 android:id="@+id/tvNhanVien"
                 android:layout_width="wrap_content"
@@ -105,36 +147,44 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
                 android:textSize="15sp" />
-
         </LinearLayout>
-
-        <Button
-            android:id="@+id/btnOrder"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/border_edit_text"
-            android:onClick="Onclick_Update"
-            android:text="Order"
-            android:textSize="17sp" />
-
-        <Button
-            android:id="@+id/btnThanhtoan"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/border_edit_text"
-            android:onClick="Onclick_Update"
-            android:text="Thanh Toán"
-            android:textSize="17sp" />
-
     </LinearLayout>
-    
+
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true">
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnOrder"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_edit_text"
+                android:text="Order"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/btnThanhtoan"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_edit_text"
+                android:text="Thanh Toán"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
 
             <EditText
                 android:id="@+id/editText2"
@@ -145,13 +195,11 @@
 
             <Button
                 android:id="@+id/button1"
-                android:layout_width="wrap_content"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" />
-
+                android:text="Gọi" />
         </LinearLayout>
-    
-    </RelativeLayout>
+    </LinearLayout>
 
-</ScrollView>
+</RelativeLayout>
