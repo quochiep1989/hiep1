@@ -8,5 +8,12 @@
         android:showAsAction="ifRoom"
         android:title="Back">
     </item>
+    
+    <item
+        android:id="@+id/AddDodung"
+        android:icon="@drawable/actionbar_add"
+        android:showAsAction="ifRoom"
+        android:title="Add Do dung">
+    </item>
 
 </menu>

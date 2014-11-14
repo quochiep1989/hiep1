@@ -1,5 +1,7 @@
 package com.restaurent.easyorder;
 
+import com.restaurent.setting.SettingActivity;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

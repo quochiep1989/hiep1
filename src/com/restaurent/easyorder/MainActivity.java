@@ -1,5 +1,7 @@
 package com.restaurent.easyorder;
 
+import com.restaurent.setting.SettingActivity;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;

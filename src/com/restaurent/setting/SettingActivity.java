@@ -1,10 +1,19 @@
-package com.restaurent.easyorder;
+package com.restaurent.setting;
+
+import com.restaurent.easyorder.MainActivity;
+import com.restaurent.easyorder.R;
+import com.restaurent.easyorder.R.id;
+import com.restaurent.easyorder.R.layout;
+import com.restaurent.easyorder.R.menu;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class SettingActivity extends Activity {
 
@@ -18,6 +27,15 @@ public class SettingActivity extends Activity {
 					| Intent.FLAG_ACTIVITY_CLEAR_TASK);
 			SettingActivity.this.startActivity(i);
 		}
+		if (itemid == R.id.AddDodung) {
+			LinearLayout layout_adddondung = (LinearLayout) findViewById(R.id.layout_addDodung);
+			if (layout_adddondung.getVisibility()==View.GONE) {
+				layout_adddondung.setVisibility(View.VISIBLE);
+			}else {
+				layout_adddondung.setVisibility(View.GONE);
+			}
+		}
+		
 		return super.onMenuItemSelected(featureId, item);
 	}
 
@@ -31,5 +49,10 @@ public class SettingActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_setting);
+		init();
+	}
+	public void init(){
+		LinearLayout layout_adddondung = (LinearLayout) findViewById(R.id.layout_addDodung);
+		layout_adddondung.setVisibility(View.GONE);
 	}
 }
